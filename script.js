@@ -59,3 +59,17 @@ for (const call of callBtn) {
 document.getElementById('clear-btn').addEventListener('click', function () {
   document.getElementById('history-container').innerHTML = "";
 })
+
+//click copy button event listener
+const copyBtn = document.getElementsByClassName('copy-btn');
+for (const btn of copyBtn) {
+  btn.addEventListener('click', function () {
+    const number = btn.parentElement.children.item(4).innerText;
+    navigator.clipboard.writeText(number);
+    alert(`copy number:${number}`);
+    const copy = document.getElementById('copy-count');
+    numberCopy = parseInt(copy.innerText);
+    const total = numberCopy + 1;
+    copy.innerText = total;
+  })
+}
