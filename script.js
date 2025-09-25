@@ -17,19 +17,11 @@ for (const call of callBtn) {
   call.addEventListener('click', function () {
     const title = call.parentElement.children.item(1).innerText;
     const number = call.parentElement.children.item(4).innerText;
-    const coin = document.getElementById('coin');
-    const numberCoin = parseInt(coin.innerText);
-    if (numberCoin >= 20) {
-      const message = `calling ${title} ${number}...`;
-      alert(message);
-      const totalCoin = numberCoin - 20;
-      coin.innerText = totalCoin;
-      //added information in history section
-      const time = new Date();
-      const timeString = time.toLocaleTimeString();
-      const historyContainer = document.getElementById('history-container');
-      const addInfo = document.createElement('div');
-      addInfo.innerHTML = `
+    const time = new Date();
+    const timeString = time.toLocaleTimeString();
+    const historyContainer = document.getElementById('history-container');
+    const addInfo = document.createElement('div');
+    addInfo.innerHTML = `
       <div>
                 <p class="font-[inter] font-semibold text-[18px]">${title}</p>
                 <p class="font-[hind madurai] text-[#5c5c5c] font-[hind madurai]">${number}</p>
@@ -38,19 +30,16 @@ for (const call of callBtn) {
         <p>${timeString}</p>
       </div>
       `;
-      addInfo.classList.add(
-        'flex',
-        'justify-between',
-        'mb-2',
-        'bg-[#fafafa]',
-        'p-3',
-        'rounded-sm'
-      );
-      historyContainer.appendChild(addInfo);
-
-    } else {
-      alert('Sorry!call is not possible....');
-    }
+    addInfo.classList.add(
+      'flex',
+      'justify-between',
+      'mb-2',
+      'bg-[#fafafa]',
+      'p-3',
+      'rounded-sm'
+    );
+    historyContainer.appendChild(addInfo);
+    
   })
 }
 
