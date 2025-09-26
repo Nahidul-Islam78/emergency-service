@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Emergency Service</title>
+  <link rel="shortcut icon" href="./assets/logo-dark.png" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind & DaisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-100 font-roboto">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-green-900 via-green-700 to-green-900 p-6">
+    <nav class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img class="h-12 w-12" src="./assets/logo.png" alt="logo">
+        <p class="text-xl font-bold text-white">National Emergency <br> Service</p>
+      </div>
+      <ul class="flex flex-wrap gap-3 justify-center md:justify-end">
+        <li><a class="btn bg-green-600 hover:bg-green-800 text-white" href="#home">Home</a></li>
+        <li><a class="btn bg-green-600 hover:bg-green-800 text-white" href="./national.html">National Emergency</a></li>
+        <li><a class="btn bg-green-600 hover:bg-green-800 text-white" href="./fire.html">Fire Service</a></li>
+        <li><a class="btn bg-green-600 hover:bg-green-800 text-white" href="./information.html">Information</a></li>
+        <li><a class="btn bg-green-600 hover:bg-green-800 text-white" href="./electricity.html">Electricity Outage</a></li>
+        <li><a class="btn bg-green-600 hover:bg-green-800 text-white" href="./woman.html">Women & Child</a></li>
+        <li><a class="btn bg-green-600 hover:bg-green-800 text-white" href="./corruption.html">Anti-Corruption</a></li>
+        <li><a class="btn bg-green-600 hover:bg-green-800 text-white" href="./gas.html">Gas Emergency</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="flex flex-col justify-center items-center text-center mt-6">
+      <img src="./assets/logo-dark.png" alt="logo" class="h-24 w-24 mx-auto mb-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Emergency Service Directory</h1>
+      <p class="text-lg md:text-xl text-white max-w-2xl">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
+    </section>
+  </header>
+<main class="bg-[#f5fff6] ">
+  <section id="service" class="max-w-sm  mx-auto md:max-w-7xl md:mx-auto  flex flex-col md:flex-row gap-4 ">
+    <div
+      class="card-container  flex flex-col gap-6 items-center justify-center  py-6  md:grid md:grid-cols-3 md:gap-6 md:w-[79%]">
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px]  w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/emergency.png" alt="national emergency logo" class="h-[32px] w-[32px]">
+          <i class="fa-regular fa-heart heart-icon "></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">National Emergency Number</p>
+        <p class="text-[18px] text-[#5c5c5c] font-[roboto]">National Emergency</p>
+        <br>
+        <p class="font-bold text-[32px] font-[roboto]">999</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c] font-[hind madurai]">All</p> <br>
+        <br>
+        <button class="copy-btn btn w-[110px] md:w-[130px] rounded-md h-[42px]"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black"
+          href="tel:999"><i class="fa-solid fa-phone"></i>Call</a>
+
+      </div>
+
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px] w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/fire-service.png" alt="fire service logo" class="h-[32px] w-[32px]">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">Fire Service Number</p>
+        <p class="text-[18px] text-[#5c5c5c]">Fire Service</p>
+        <br>
+        <p class="font-bold text-[32px]">102</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c]">fire</p> <br> <br>
+        <button class="btn  btn w-[110px] md:w-[130px] rounded-md h-[42px] copy-btn"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black "
+          href="tel:102"><i class="fa-solid fa-phone"></i>Call</a>
+
+      </div>
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px] w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/information.png" alt="national emergency logo " class="h-[32px] w-[32px]">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">Information Helpline</p>
+        <p class="text-[18px] text-[#5c5c5c]">Information Service</p>
+        <br>
+        <p class="font-bold text-[32px]">333</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c]">Govt.</p> <br> <br>
+        <button class=" copy-btn btn btn w-[110px] md:w-[130px] rounded-md h-[42px]"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black "
+          href="tel:333"><i class="fa-solid fa-phone"></i>Call</a>
+
+      </div>
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px] w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/eletricty.png" alt="national emergency logo" class="h-[32px] w-[32px]">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">Electricity Helpline</p>
+        <p class="text-[18px] text-[#5c5c5c]">Electricity Outage</p>
+        <br>
+        <p class="font-bold text-[32px]">16999</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c]">Electricity</p> <br> <br>
+        <button class=" copy-btn btn btn w-[110px] md:w-[130px] rounded-md h-[42px]"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black"
+          href="tel:16999"><i class="fa-solid fa-phone"></i>Call</a>
+
+      </div>
+
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px] w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/woman.png" alt="national emergency logo" class="h-[28px] w-[45px]">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">Women & Child Helpline</p>
+        <p class="text-[18px] text-[#5c5c5c]">Women & Child Helpline</p>
+        <br>
+        <p class="font-bold text-[32px]">109</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c]">Help</p> <br> <br>
+        <button class="copy-btn btn btn w-[110px] md:w-[130px] rounded-md h-[42px]"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black "
+          href="tel:109"><i class="fa-solid fa-phone"></i>Call</a>
+
+      </div>
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px] w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/anti.png" alt="national emergency logo" class="h-[32px] w-[32px]">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">Anti-Corruption Helpline</p>
+        <p class="text-[18px] text-[#5c5c5c]">Anti-Corruption</p>
+        <br>
+        <p class="font-bold text-[32px]">106</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c]">Govt.</p> <br> <br>
+        <button class="btn  btn w-[110px] md:w-[130px] rounded-md h-[42px] copy-btn"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black "
+          href="tel:106"><i class="fa-solid fa-phone"></i>Call</a>
+
+      </div>
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px] w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/police.png" alt="police logo" class="h-[32px] w-[32px]">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">Police Helpline Number</p>
+        <p class="text-[18px] text-[#5c5c5c]">Police</p>
+        <br>
+        <p class="font-bold text-[32px]">999</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c]">police</p> <br> <br>
+        <button class="btn  btn w-[110px] md:w-[130px] rounded-md h-[42px] copy-btn"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black"
+          href="tel:999"><i class="fa-solid fa-phone"></i>Call</a>
+
+
+      </div>
+
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px] w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/titas.png" alt="national emergency logo" class="h-[32px] w-[32px]">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">Gas Emergency ( Titas)</p>
+        <p class="text-[18px] text-[#5c5c5c]">Govt.</p>
+        <br>
+        <p class="font-bold text-[32px]">16496</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c]">Utility</p> <br> <br>
+        <button class=" copy-btn btn btn w-[110px] md:w-[130px] rounded-md h-[42px]"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black "
+          href="tel:16496"><i class="fa-solid fa-phone"></i>Call</a>
+
+      </div>
+      <div
+        class="cards rounded-[12px] border-none shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[20px] w-[300px] md:w-80 bg-[#ffffff]">
+        <div class="flex items-center justify-between">
+          <img src="./assets/ambulance.png" alt="ambulance service logo" class="h-[32px] w-[32px]">
+          <i class="fa-regular fa-heart heart-icon"></i>
+        </div>
+        <p class="text-[20px] font-bold font-[hind madurai]">Ambulance Service</p>
+        <p class="text-[18px] text-[#5c5c5c]">Ambulance</p>
+        <br>
+        <p class="font-bold text-[32px]">999</p>
+        <p class="text-[18px] px-3 rounded-xl bg-[#f2f2f2] inline-block text-[#5c5c5c] font-[hind madurai]">Health</p>
+        <br>
+        <br>
+        <button class="copy-btn btn btn w-[110px] md:w-[130px] rounded-md h-[42px]"><i
+            class="fa-regular fa-copy"></i>Copy</button>
+        <a class="btn call-btn btn-active ml-2 rounded-md bg-[#00A63E] text-[#ffffff] btn w-[110px] md:w-[130px] h-[42px] hover:bg-black "
+          href="tel:999"><i class="fa-solid fa-phone"></i>Call</a>
+
+      </div>
+
+
+    </div>
+
+    <div class=" md:w-[21%] py-6 rounded-[12px]">
+      <div class="bg-[#ffffff] h-full  border-none rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]">
+        <div class="p-3 nav flex justify-between items-center bg-[#ffffff] ">
+          <div><i class="fa-regular fa-clock"></i>
+            <p class="text-[18px] font-medium font-[roboto]">Call History</p>
+          </div>
+          <div><button
+              class="btn btn-active ml-2 rounded-full bg-[#00A63E] text-[#ffffff] w-[110px] md:w-[100px] h-[42px] font-[inter] font-medium"
+              id="clear-btn">Clear</button>
+          </div>
+        </div>
+        <div id="history-container" class="history-card p-3 rounded-sm m-4">
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="bg-green-600 mt-12">
+  <p class="text-center p-4 text-white text-lg">&copy; 2025 All rights reserved</p>
+</footer>
+
+    
+  </body>

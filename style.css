@@ -1,0 +1,20 @@
+.services ul{
+  display: none;
+}
+.services:hover ul{
+  display: block;
+  border-radius: 2%;
+}
+.second-list li{
+  margin-bottom: 10px;
+  background-color: #00A63E;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 2px;
+}
+.second-list li:hover{
+  background-color: black;
+}
+.second-list li a{
+  padding: 2px;
+}

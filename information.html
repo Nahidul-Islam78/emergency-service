@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>National Emergency Information (333) — Objectives & Approach</title>
+  <style>
+    :root {
+      --accent: #0b6efd;
+      /* blue accent for info service */
+      --accent-dark: #0a58ca;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --bg: #f4f7fb;
+      --radius: 12px;
+      --maxWidth: 1100px;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: #111827;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.45;
+    }
+
+    .container {
+      max-width: var(--maxWidth);
+      margin: 36px auto;
+      padding: 20px;
+    }
+
+    header.site-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      padding: 18px;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    }
+
+    .site-header .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+    }
+
+    .site-header p {
+      margin: 0;
+      opacity: 0.95;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.95)
+    }
+
+    main.grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(19, 19, 24, 0.04);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    ul.objectives {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .obj-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(11, 110, 253, 0.04), rgba(11, 110, 253, 0.02));
+      border: 1px solid rgba(11, 110, 253, 0.06);
+    }
+
+    .obj-item .icon {
+      min-width: 36px;
+      min-height: 36px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+    }
+
+    .obj-item .text h4 {
+      margin: 0;
+      font-size: 15px
+    }
+
+    .obj-item .text p {
+      margin: 6px 0 0 0;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .aside {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      top: 0;
+    }
+
+    .call-card {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px;
+      background: linear-gradient(90deg, #fff, #fff);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .call-left {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .call-badge {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    .call-info h3 {
+      margin: 0;
+      font-size: 16px
+    }
+
+    .call-info p {
+      margin: 4px 0 0 0;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .call-actions a {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .call-actions a.secondary {
+      background: #fff;
+      color: var(--accent);
+      border: 1px solid rgba(11, 110, 253, 0.12);
+      margin-left: 8px;
+    }
+
+    .accordion {
+      margin-top: 10px
+    }
+
+    .acc-item {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      margin-bottom: 10px;
+      background: #fff;
+    }
+
+    .acc-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      cursor: pointer;
+    }
+
+    .acc-head h4 {
+      margin: 0;
+      font-size: 15px
+    }
+
+    .acc-body {
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 14px;
+      display: none;
+      border-top: 1px dashed rgba(0, 0, 0, 0.04)
+    }
+
+    .acc-body.visible {
+      display: block
+    }
+
+    footer.note {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Responsive */
+    @media (max-width:980px) {
+      main.grid {
+        grid-template-columns: 1fr;
+      }
+
+      .aside {
+        order: 2
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="site-header" role="banner" aria-label="National Emergency Information header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">333</div>
+        <div>
+          <h1>National Emergency Information (333)</h1>
+          <p>Information & guidance hotline — timely, reliable public information</p>
+        </div>
+      </div>
+
+      <div style="margin-left:auto; text-align:right">
+        <a href="tel:333"
+          style="background:rgba(255,255,255,0.12); color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600">Call
+          333</a>
+      </div>
+    </header>
+
+    <main class="grid" role="main">
+      <!-- Left: Objectives + Approach -->
+      <section>
+        <article class="card" aria-labelledby="obj-title">
+          <div class="section-title">
+            <div
+              style="width:44px; height:44px; border-radius:8px; background:linear-gradient(180deg,var(--accent),var(--accent-dark)); display:grid; place-items:center; color:#fff; font-weight:700">
+              O</div>
+            <div>
+              <h2 id="obj-title">Objectives</h2>
+              <p>What the National Emergency Information (333) aims to achieve</p>
+            </div>
+          </div>
+
+          <ul class="objectives" aria-label="Objectives list">
+            <li class="obj-item">
+              <div class="icon" aria-hidden="true">1</div>
+              <div class="text">
+                <h4>Centralized Public Information</h4>
+                <p>Provide a single, trusted source for official emergency information and advisories.</p>
+              </div>
+            </li>
+
+            <li class="obj-item">
+              <div class="icon" aria-hidden="true">2</div>
+              <div class="text">
+                <h4>Real-time Guidance</h4>
+                <p>Offer up-to-date instructions on safety procedures, evacuation, health guidance, and warnings.</p>
+              </div>
+            </li>
+
+            <li class="obj-item">
+              <div class="icon" aria-hidden="true">3</div>
+              <div class="text">
+                <h4>Multi-channel Access</h4>
+                <p>Deliver information via phone, SMS, website, and social platforms to reach everyone.</p>
+              </div>
+            </li>
+
+            <li class="obj-item">
+              <div class="icon" aria-hidden="true">4</div>
+              <div class="text">
+                <h4>Support for Response Agencies</h4>
+                <p>Coordinate messages with Police, Health, Fire, and other agencies to ensure consistent public
+                  communications.</p>
+              </div>
+            </li>
+
+            <li class="obj-item">
+              <div class="icon" aria-hidden="true">5</div>
+              <div class="text">
+                <h4>Build Public Trust</h4>
+                <p>Provide accurate, verified information to reduce panic and misinformation during crises.</p>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" style="margin-top:18px" aria-labelledby="approach-title">
+          <div class="section-title">
+            <div
+              style="width:44px; height:44px; border-radius:8px; background:#111827; display:grid; place-items:center; color:#fff; font-weight:700">
+              A</div>
+            <div>
+              <h2 id="approach-title">Approach</h2>
+              <p>How the National Emergency Information service operates</p>
+            </div>
+          </div>
+
+          <div class="accordion" role="region" aria-label="Approach steps">
+            <div class="acc-item">
+              <button class="acc-head" aria-expanded="false" aria-controls="acc1">
+                <h4>24/7 Information Hotline</h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke="#6b7280" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="acc1" class="acc-body">
+                Operate a round-the-clock call centre for citizens to get verified information, guidance and situational
+                updates.
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-head" aria-expanded="false" aria-controls="acc2">
+                <h4>Multi-channel Dissemination</h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke="#6b7280" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="acc2" class="acc-body">
+                Publish official messages via SMS, website, social media, and partnerships with broadcasters to reach
+                broad audiences quickly.
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-head" aria-expanded="false" aria-controls="acc3">
+                <h4>Coordinate with Agencies</h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke="#6b7280" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="acc3" class="acc-body">
+                Work closely with Police, Health, Fire, Disaster Management, and local authorities to ensure consistent
+                and actionable advisories.
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-head" aria-expanded="false" aria-controls="acc4">
+                <h4>Verified Information & Rumor Control</h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke="#6b7280" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="acc4" class="acc-body">
+                Validate incoming reports and proactively counter misinformation with official facts and instructions.
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-head" aria-expanded="false" aria-controls="acc5">
+                <h4>Analytics & Improvement</h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke="#6b7280" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="acc5" class="acc-body">
+                Log calls and messages, analyze trends, and use feedback to improve messaging, reach and responsiveness.
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Right: Quick call + resources -->
+      <aside class="aside" aria-labelledby="quick-help">
+        <div class="card call-card" role="region" aria-label="Quick call to 333">
+          <div class="call-left">
+            <div class="call-badge" aria-hidden="true">333</div>
+            <div class="call-info">
+              <h3>Information Hotline</h3>
+              <p>Official public information — 24/7</p>
+            </div>
+          </div>
+          <div class="call-actions">
+            <a href="tel:333">📞 Call Now</a>
+            <a class="secondary" href="#approach-title">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card" role="note" aria-labelledby="tips">
+          <h3 id="tips" style="margin-top:0">Tips When Contacting 333</h3>
+          <ul style="margin:8px 0 0 0; padding-left:18px; color:var(--muted);">
+            <li>State your location and any landmarks.</li>
+            <li>Describe the situation briefly and clearly.</li>
+            <li>Ask for specific guidance (evacuation, shelter, health advice).</li>
+            <li>Follow instructions and verify with official sources when possible.</li>
+          </ul>
+        </div>
+
+        <div class="card" role="note" aria-labelledby="resources">
+          <h3 id="resources" style="margin-top:0">Related Resources</h3>
+          <p style="color:var(--muted); margin:8px 0 0 0">Visit the official government portal or follow verified social
+            media channels for live updates and downloadable preparedness guides.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="note">
+      © <span id="year"></span> National Emergency Information — Dial 333 for verified public information.
+    </footer>
+  </div>
+
+  <script>
+    // Accordion toggle + set year
+    document.querySelectorAll('.acc-head').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        body.classList.toggle('visible');
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
