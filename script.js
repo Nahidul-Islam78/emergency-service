@@ -1,15 +1,3 @@
-//click card heart icon event listener
-const heartsIcon = document.getElementsByClassName('heart-icon');
-for (const icon of heartsIcon) {
-  icon.addEventListener('click', function () {
-    icon.classList.add('text-red-500');
-    const heart = document.getElementById('heart');
-    const numberHeart = parseInt(heart.innerText);
-    const totalHeart = numberHeart + 1;
-    heart.innerText = totalHeart;
-  })
-}
-
 
 //click call button event listener
 const callBtn = document.getElementsByClassName('call-btn');

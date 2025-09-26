@@ -287,7 +287,7 @@
       <!-- quick CTA on the right (visually) -->
       <div style="margin-left:auto; text-align:right">
         <a href="tel:999"
-          style="background:rgba(255,255,255,0.12); color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600">Call
+          style="background:rgba(255,255,255,0.12); color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600" class="call-btn">Call
           999</a>
       </div>
     </header>
@@ -445,7 +445,7 @@
             </div>
           </div>
           <div class="call-actions">
-            <a href="tel:999">📞 Call Now</a>
+            <a href="tel:999" class="call-btn">📞 Call Now</a>
             <a class="secondary" href="#approach-title">Learn More</a>
           </div>
         </div>
@@ -469,7 +469,7 @@
     </main>
 
     <footer class="note">
-      © <span id="year"></span> National Emergency Number — Use 999 only for real emergencies.
+      © 2025 National Emergency Number — Use 999 only for real emergencies.
     </footer>
   </div>
 
@@ -484,9 +484,8 @@
       });
     });
 
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
+
   </script>
 </body>
-
+<script src="./script.js"></script>
 </html>
